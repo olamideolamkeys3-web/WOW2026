@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOW'26 — The Overflow</title>
+<meta name="theme-color" content="#3b071c">
+<style>
+:root{
+  --wine:#3b071c; --wine2:#5a0c2a; --wine3:#7d173d;
+  --gold:#d6a83f; --cream:#fff8ee; --muted:#e7d5d9;
+  --card:rgba(255,255,255,.075); --line:rgba(214,168,63,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:Georgia, "Times New Roman", serif;
+  color:var(--cream); background:
+  radial-gradient(circle at 20% 0%, #7b193d 0, transparent 35%),
+  radial-gradient(circle at 90% 20%, #68102f 0, transparent 32%),
+  linear-gradient(145deg,#250410,#3b071c 48%,#21030e);
+  min-height:100vh;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;
+ background-image:radial-gradient(#fff 1px,transparent 1px);background-size:28px 28px}
+.container{width:min(1080px,92%);margin:auto}
+.hero{padding:22px 0 0;text-align:center}
+.badge{display:inline-block;border:1px solid var(--line);padding:7px 16px;border-radius:999px;
+ color:#f4d58a;font:600 12px/1.2 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,10vw,110px);line-height:.82;margin:22px 0 12px;
+ letter-spacing:3px;color:#f2cf73;text-shadow:0 5px 28px #000}
+.hero h1 span{display:block;font-size:.32em;letter-spacing:7px;color:#fff}
+.hero p{font:600 14px Arial,sans-serif;letter-spacing:3px;color:#f4e2b1;text-transform:uppercase}
+.flyer{margin:28px auto 0;max-width:620px;border:1px solid var(--line);padding:8px;
+ background:#16020a;box-shadow:0 25px 80px #140108;border-radius:14px}
+.flyer img{width:100%;display:block;border-radius:8px}
+.cta{display:inline-block;margin:26px 0 10px;padding:15px 25px;border-radius:999px;
+ background:linear-gradient(135deg,#c99225,#f1d47c);color:#2a0613;text-decoration:none;
+ font:800 13px Arial,sans-serif;letter-spacing:1.5px}
+section{padding:72px 0}
+.kicker{text-align:center;color:#e7bd60;font:700 12px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase}
+h2{text-align:center;font-size:clamp(30px,6vw,52px);margin:10px 0 25px;color:#f5d78d}
+.welcome{max-width:850px;margin:auto;background:var(--card);border:1px solid rgba(255,255,255,.12);
+ border-radius:22px;padding:30px;backdrop-filter:blur(8px);box-shadow:0 18px 50px rgba(0,0,0,.2)}
+.welcome p{font-size:18px;line-height:1.75;margin:0 0 18px;color:#f5e9e9}
+.question{margin-top:25px;padding:20px;border-left:3px solid var(--gold);background:rgba(0,0,0,.14);
+ color:#f5d78d;font-size:20px;line-height:1.5}
+.program{max-width:850px;margin:auto;display:grid;gap:10px}
+.item{display:grid;grid-template-columns:52px 1fr;align-items:center;padding:15px 17px;
+ border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:14px}
+.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+ background:#f0cb70;color:#3b071c;font:bold 14px Arial}
+.item div:last-child{font-size:17px;color:#fff1f1}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:850px;margin:0 auto}
+.slot{min-height:230px;border:1px dashed rgba(240,203,112,.6);border-radius:18px;
+ background:rgba(255,255,255,.055);display:flex;flex-direction:column;align-items:center;
+ justify-content:center;text-align:center;padding:16px;overflow:hidden;position:relative}
+.slot img{width:100%;height:230px;object-fit:cover;border-radius:12px;display:none}
+.slot.has-photo img{display:block}
+.slot.has-photo .slot-content{display:none}
+.slot-content strong{display:block;font:700 13px Arial,sans-serif;letter-spacing:2px;color:#f2cf73;margin-bottom:8px}
+.slot-content span{font:14px Arial,sans-serif;color:#decdd1}
+.slot input{display:none}
+.upload{display:inline-block;margin-top:14px;padding:10px 15px;border-radius:999px;border:1px solid var(--line);
+ color:#f5d78d;font:700 12px Arial,sans-serif;cursor:pointer}
+.note{text-align:center;color:#d9c5c9;font:13px Arial,sans-serif;line-height:1.6;margin:18px auto;max-width:700px}
+footer{padding:35px 0 55px;text-align:center;border-top:1px solid rgba(255,255,255,.08);
+ color:#cdb9bf;font:12px Arial,sans-serif}
+@media(max-width:650px){.photos{grid-template-columns:1fr}.slot{min-height:210px}.slot img{height:210px}.welcome{padding:22px}.welcome p{font-size:16px} iframe{height:1050px}}
+</style>
+</head>
+<body>
+<header class="hero container">
+  <div class="badge">Yahweh Icons presents</div>
+  <h1><span>WOW'26</span>THE OVERFLOW</h1>
+  <p>Wonders of Worship • It's time for Overflow</p>
+  <div class="flyer"><img src="wow26-flyer.jpg" alt="WOW 2026 — The Overflow flyer"></div>
+  <a class="cta" href="#welcome">ENTER THE WOW EXPERIENCE ↓</a>
+</header>
+
+<main>
+<section id="welcome">
+<div class="container">
+  <div class="kicker">Welcome</div>
+  <h2>WELCOME TO WOW'26!</h2>
+  <div class="welcome">
+    <p><strong>We are so honored you are here.</strong></p>
+    <p>Thank you for joining us today. As you open this page, take a deep breath—this moment was prepared with you specifically in our mind. We believe with certainty that as you join in worship, God is meeting you at the point of your deepest need, and your testimony is sure.</p>
+    <div class="question"><strong>What is that one specific prayer or breakthrough on your heart today?</strong></div>
+    <p>Get a paper from the ushers, write it down, you'll lay it before God as one united body during our time together in worship, and we trust God for your testimony.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="kicker">The Flow</div>
+  <h2>Programme Order</h2>
+  <div class="program">
+    <div class="item"><div class="num">01</div><div>Opening Prayer</div></div>
+    <div class="item"><div class="num">02</div><div>Praise and Worship</div></div>
+    <div class="item"><div class="num">03</div><div>Prayer 1</div></div>
+    <div class="item"><div class="num">04</div><div>Opening Speech and Welcome of Guests</div></div>
+    <div class="item"><div class="num">05</div><div>Word Charge</div></div>
+    <div class="item"><div class="num">06</div><div>First Ministration</div></div>
+    <div class="item"><div class="num">07</div><div>Second Ministration</div></div>
+    <div class="item"><div class="num">08</div><div>Offering — Yahweh Icons Ministration</div></div>
+    <div class="item"><div class="num">09</div><div>Third Ministration</div></div>
+    <div class="item"><div class="num">10</div><div>Testimonies</div></div>
+    <div class="item"><div class="num">11</div><div>Last Ministration</div></div>
+    <div class="item"><div class="num">12</div><div>Announcement</div></div>
+    <div class="item"><div class="num">13</div><div>Closing Prayers and Benediction</div></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="kicker">Your Memories</div>
+  <h2>Capture Your WOW Moments</h2>
+  <p class="note">
+    You were part of WOW'26. Share your memories with us — upload up to
+    <strong>3 photos and 2 short videos</strong>. Each file can be up to 10 MB.
+    Your name is optional.
+  </p>
+  <div style="max-width:900px;margin:28px auto 0;background:rgba(255,255,255,.055);
+    border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    box-shadow:0 20px 70px rgba(0,0,0,.25)">
+    <iframe
+      src="https://tally.so/r/rj7zdL?transparentBackground=1"
+      width="100%"
+      height="980"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="WOW'26 Media Upload Form"
+      style="display:block;background:transparent">
+    </iframe>
+  </div>
+  <p class="note" style="margin-top:16px">
+    Having trouble with the form?
+    <a href="https://tally.so/r/rj7zdL" target="_blank" rel="noopener"
+       style="color:#f2cf73">Open the upload form directly →</a>
+  </p>
+</div>
+</section>
+</main>
+
+<footer>
+  WOW'26 • THE OVERFLOW • Yahweh Icons<br>
+  <span style="display:inline-block;margin-top:8px">Jikwoyi Phase 2 Junction, Abuja</span>
+</footer>
+
+<script>
+function preview(input,id){
+  const file=input.files && input.files[0]; if(!file) return;
+  const slot=document.getElementById(id), img=slot.querySelector('img');
+  const reader=new FileReader();
+  reader.onload=e=>{img.src=e.target.result;slot.classList.add('has-photo')};
+  reader.readAsDataURL(file);
+}
+</script>
+</body>
+</html>
